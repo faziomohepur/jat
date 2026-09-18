@@ -22,7 +22,7 @@ export default {
 
       // For other images, proxy to Netlify
       const netlifyUrl = new URL(url.toString());
-      netlifyUrl.hostname = 'xedienat.tmc.io.vn';
+      netlifyUrl.hostname = 'xedienat.netlify.app';
       return fetch(netlifyUrl);
     }
 
@@ -35,7 +35,7 @@ export default {
 
     // For all other requests, proxy to Netlify
     const netlifyUrl = new URL(url.toString());
-    netlifyUrl.hostname = 'xedienat.tmc.io.vn';
+    netlifyUrl.hostname = 'xedienat.netlify.app';
 
     const proxyRequest = new Request(netlifyUrl, {
       method: request.method,
